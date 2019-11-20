@@ -4,11 +4,11 @@
 <ul>
   <% @user.doctors.each do |doctor| %>
     <li>
-      <%= link_to course.name, doctor %>
+      <%= link_to doctor.name, doctor_path(doctor) %>
     </li>
   <% end %>
 </ul>
 <br />
 <br />
 <br />
-<%= link_to 'Delete User', @user, method: :delete, class: "ui red button inverted" %>
+<%= link_to 'Delete User', user_path(@user), method: :delete, class: "ui red button inverted" %>
